@@ -1,0 +1,23 @@
+import java.util.*;
+public class merge {
+    public static int secLar(int arr[]){
+        int large= arr[0];
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>large){
+                large=arr[i];
+            }
+        }
+        int secl= arr[0];
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>secl && arr[i]!=large){
+                secl=arr[i];
+            }
+        }
+        return secl;
+    }
+    public static void main(String args[]){
+        int arr[]={3,5,7,2,9,1,0};
+        int ans=secLar(arr);
+        System.out.println(ans);
+    }
+}
